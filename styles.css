@@ -1,0 +1,174 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default body styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+/* Style for the index page with dark gradient background */
+body.index {
+    background-color: linear-gradient(135deg, #3b93a6, #47d047); /* Dark green gradient */
+}
+
+/* Set up a background for the info page */
+body.info {
+    background-image: url('./michelle-ding-7en5zROFJdI-unsplash.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+/* Content container for index page */
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 1em; /* Adding padding for spacing */
+}
+
+/* Clickable image */
+#clickable-cigarette {
+    width: 90%;            /* Responsive width */
+    max-width: 600px;     /* Max width */
+    height: auto;         /* Responsive height */
+    margin-bottom: 2em;   /* Space below image */
+}
+
+/* Styled link for More Info */
+.info-link {
+    font-size: 2em; /* Font size for the text link */
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    position: relative; /* For gradient effect */
+    padding: 0.5em 1em; /* Padding for better appearance */
+}
+
+/* Add gradient background on hover */
+.info-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8d3131, #bb8450); /* Gradient color */
+    border-radius: 10px; /* Rounded corners */
+    z-index: -1; /* Send the pseudo-element behind the text */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 0; /* Start as invisible */
+}
+
+/* Show the gradient background when hovering */
+.info-link:hover::after {
+    opacity: 1; /* Make visible on hover */
+}
+
+/* Container for the info page */
+.info-container {
+    text-align: center;
+    padding: 2em; /* Responsive padding */
+}
+
+/* Title styling */
+.title {
+    font-size: 5em; /* Increased size for large screens */
+    opacity: 0.9; 
+    color: #6cbd29; /* Bright white color */
+    font-weight: bold; /* Increased weight */
+}
+
+/* Main Focus Text styling */
+.room-info {
+    font-size: 3em; /* Adjust font size for mobile responsiveness */
+    font-weight: bold;
+    opacity: 0.9;
+    display: flex; /* Using Flexbox for horizontal alignment */
+    justify-content: center; /* Center alignment */
+    align-items: center; /* Center vertically */
+    gap: 1em; /* Space between elements */
+}
+
+.room-number {
+    font-size: 3em; /* Increased size for better visibility */
+    font-weight: 900; 
+    color: rgb(238, 84, 84);  /* Dark red color for room number */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer styling */
+.footer {
+    margin-top: 1em; 
+    font-size: 2.5em; /* Adjust for better mobile responsiveness */
+}
+
+/* WhatsApp number styling */
+.whatsapp-number {
+    font-weight: bold; 
+    color: #8e2fed; /* Bright gold color for WhatsApp number */
+}
+
+/* Responsive adjustments for tablets */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 4em; 
+    }
+    .room-info {
+        font-size: 2.5em; 
+    }
+    .room-number {
+        font-size: 2.5em; 
+    }
+    .footer {
+        font-size: 2em; 
+    }
+    .info-link {
+        font-size: 1.5em; /* Adjust link size for smaller screens */
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 2em; 
+    }
+    .room-info {
+        font-size: 1.8em; 
+    }
+    .room-number {
+        font-size: 2em; 
+    }
+    .footer {
+        font-size: 1.5em; 
+    }
+    .info-link {
+        font-size: 1em; /* Smaller link size */
+    }
+}
+
+/* Additional Media Queries for Very Small Devices */
+@media screen and (max-width: 360px) {
+    .title {
+        font-size: 1.5em; 
+    }
+    .room-info {
+        font-size: 1.5em; 
+    }
+    .room-number {
+        font-size: 1.8em; 
+    }
+    .footer {
+        font-size: 1.5em; 
+    }
+}
