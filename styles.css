@@ -15,12 +15,11 @@ body {
     height: 100vh; 
 }
 
-/* Style for the index page with dark gradient background */
+/* Style for the index page witground for the info page */
 body.index {
-    background-color: linear-gradient(135deg, #3b93a6, #47d047); /* Dark green gradient */
+    background: linear-gradient(135deg, #76c9ec, #0a0684); /* Gradient from light brown to a darker brown */
 }
 
-/* Set up a background for the info page */
 body.info {
     background-image: url('./cris-s-6aWFzSxu4Z4-unsplash.jpg'); 
     background-size: cover; 
@@ -49,10 +48,16 @@ body.info {
 /* Styled link for More Info */
 .info-link {
     font-size: 2em; /* Font size for the text link */
-    color: #ffffff; /* White text color */
+    color: #3b0f0f; /* White    text color */
     text-decoration: none; /* Remove underline */
     position: relative; /* For gradient effect */
     padding: 0.5em 1em; /* Padding for better appearance */
+    border: 2px solid #a8d565; /* Border for better appearance */
+    border-radius: 10px; /* Rounded corners */  
+    border-color: #bb8450;
+    background-color: #8549c0;
+    margin-bottom: 5px;
+    color: #f4efef;
 }
 
 /* Add gradient background on hover */
