@@ -22,7 +22,7 @@ body.index {
 
 /* Set up a background for the info page */
 body.info {
-    background-image: url('./michelle-ding-7en5zROFJdI-unsplash.jpg'); 
+    background-image: url('./cris-s-6aWFzSxu4Z4-unsplash.jpg'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -85,7 +85,7 @@ body.info {
 .title {
     font-size: 5em; /* Increased size for large screens */
     opacity: 0.9; 
-    color: #6cbd29; /* Bright white color */
+    color: #f1f5ee; /* Bright white color */
     font-weight: bold; /* Increased weight */
 }
 
@@ -116,7 +116,7 @@ body.info {
 /* WhatsApp number styling */
 .whatsapp-number {
     font-weight: bold; 
-    color: #8e2fed; /* Bright gold color for WhatsApp number */
+    color: #caa3f0; /* Bright gold color for WhatsApp number */
 }
 
 /* Responsive adjustments for tablets */
