@@ -7,173 +7,143 @@
 
 /* Default body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     color: #ffffff;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out elements */
     align-items: center;
     height: 100vh; 
+    background: linear-gradient(135deg, #7d7ae7, #1e0860); /* Dark gradient background */
 }
 
-/* Style for the index page witground for the info page */
-body.index {
-    background: linear-gradient(135deg, #76c9ec, #0a0684); /* Gradient from light brown to a darker brown */
+/* Content Container */
+.content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    flex-grow: 1; /* Allow content to grow */
+    padding: 20px; 
 }
 
+/* Button styles */
+.info-link {
+    font-size: 2em; 
+    color: #f4efef; 
+    text-decoration: none; 
+    padding: 0.5em 1em; /* Adjusted padding for smaller screens */
+    border: 2px solid #a8d565; 
+    border-radius: 10px;  
+    background-image: linear-gradient(rgb(119, 232, 119), rgb(106, 106, 221));
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 10px 0; /* Spacing for the buttons */
+}
+
+/* Top button styling */
+.top-link {
+    margin-top: 20px; /* Distance from the top */
+}
+
+/* Hover effects for buttons */
+.info-link:hover {
+    background-image: linear-gradient(red, rgb(221, 110, 129));
+    color: #ffffff; /* Text color on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Image styling */
+#clickable-cigarette {
+    width: 90%; /* Make image wider for responsiveness */
+    max-width: 600px; /* Maximum width for larger screens */
+    border-radius: 15px; 
+    margin: 20px 0; 
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .info-link {
+        font-size: 1.8em;  /* Adjust button font size for medium screens */
+        padding: 0.5em; /* Update padding to ensure it fits */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info-link {
+        font-size: 1.5em; /* Smaller font size for mobile */
+        padding: 0.4em; /* Smaller padding for mobile */
+    }
+}
+
+/* Info page styles */
 body.info {
-    background-image: url('./cris-s-6aWFzSxu4Z4-unsplash.jpg'); 
+    background-image: url('./WhatsApp\ Image\ 2024-10-27\ at\ 16.11.22_5d88553c.jpg'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
-}
-
-/* Content container for index page */
-.content {
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 1em; /* Adding padding for spacing */
-}
-
-/* Clickable image */
-#clickable-cigarette {
-    width: 90%;            /* Responsive width */
-    max-width: 600px;     /* Max width */
-    height: auto;         /* Responsive height */
-    margin-bottom: 2em;   /* Space below image */
-}
-
-/* Styled link for More Info */
-.info-link {
-    font-size: 2em; /* Font size for the text link */
-    color: #3b0f0f; /* White    text color */
-    text-decoration: none; /* Remove underline */
-    position: relative; /* For gradient effect */
-    padding: 0.5em 1em; /* Padding for better appearance */
-    border: 2px solid #a8d565; /* Border for better appearance */
-    border-radius: 10px; /* Rounded corners */  
-    border-color: #bb8450;
-    background-color: #8549c0;
-    margin-bottom: 5px;
-    color: #f4efef;
-}
-
-/* Add gradient background on hover */
-.info-link::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #8d3131, #bb8450); /* Gradient color */
-    border-radius: 10px; /* Rounded corners */
-    z-index: -1; /* Send the pseudo-element behind the text */
-    transition: opacity 0.3s ease; /* Smooth transition */
-    opacity: 0; /* Start as invisible */
-}
-
-/* Show the gradient background when hovering */
-.info-link:hover::after {
-    opacity: 1; /* Make visible on hover */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
 }
 
 /* Container for the info page */
 .info-container {
     text-align: center;
-    padding: 2em; /* Responsive padding */
+    padding: 25px; 
+    border-radius: 15px; 
 }
 
 /* Title styling */
 .title {
-    font-size: 5em; /* Increased size for large screens */
-    opacity: 0.9; 
-    color: #f1f5ee; /* Bright white color */
-    font-weight: bold; /* Increased weight */
+    font-size: 4em; /* Larger title size */
+    color: #e8f8db; 
+    margin-bottom: 1em; 
 }
 
-/* Main Focus Text styling */
+/* Room info styling */
 .room-info {
-    font-size: 3em; /* Adjust font size for mobile responsiveness */
+    font-size: 2em; /* Decreased font size for the room info */
     font-weight: bold;
-    opacity: 0.9;
-    display: flex; /* Using Flexbox for horizontal alignment */
-    justify-content: center; /* Center alignment */
-    align-items: center; /* Center vertically */
-    gap: 1em; /* Space between elements */
 }
 
+/* Room number with highlighted style */
 .room-number {
-    font-size: 3em; /* Increased size for better visibility */
-    font-weight: 900; 
-    color: rgb(238, 84, 84);  /* Dark red color for room number */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: #f8eee9; 
 }
 
-/* Footer styling */
-.footer {
-    margin-top: 1em; 
-    font-size: 2.5em; /* Adjust for better mobile responsiveness */
-}
-
-/* WhatsApp number styling */
-.whatsapp-number {
+.highlight {
+    color: rgb(237, 152, 152); 
     font-weight: bold; 
-    color: #caa3f0; /* Bright gold color for WhatsApp number */
+    font: size 3em;;
 }
-
-/* Responsive adjustments for tablets */
+.whatsapp-number{
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 7px;
+    padding-top: 5px;
+    margin-top: 8px;
+}
+.whatsapp-number,.whatsapp-time{
+    font-weight: bold;
+    font-size: x-large;
+}
+/* Responsive Design for Info Page */
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 4em; 
+        font-size: 3em; 
     }
     .room-info {
         font-size: 2.5em; 
     }
-    .room-number {
-        font-size: 2.5em; 
-    }
-    .footer {
-        font-size: 2em; 
-    }
-    .info-link {
-        font-size: 1.5em; /* Adjust link size for smaller screens */
-    }
 }
 
-/* Responsive adjustments for mobile */
 @media screen and (max-width: 480px) {
     .title {
-        font-size: 2em; 
+        font-size: 2.5em; 
     }
     .room-info {
-        font-size: 1.8em; 
-    }
-    .room-number {
         font-size: 2em; 
-    }
-    .footer {
-        font-size: 1.5em; 
-    }
-    .info-link {
-        font-size: 1em; /* Smaller link size */
-    }
-}
-
-/* Additional Media Queries for Very Small Devices */
-@media screen and (max-width: 360px) {
-    .title {
-        font-size: 1.5em; 
-    }
-    .room-info {
-        font-size: 1.5em; 
-    }
-    .room-number {
-        font-size: 1.8em; 
-    }
-    .footer {
-        font-size: 1.5em; 
     }
 }
