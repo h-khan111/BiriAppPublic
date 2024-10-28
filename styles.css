@@ -6,12 +6,11 @@
 }
 
 /* Default body styles */
-body {
+body.index {
     font-family: 'Arial', sans-serif;
     color: #ffffff;
     display: flex;
     flex-direction: column; /* Stack content vertically */
-    justify-content: space-between; /* Space out elements */
     align-items: center;
     height: 100vh; 
     background: linear-gradient(135deg, #7d7ae7, #1e0860); /* Dark gradient background */
@@ -22,17 +21,18 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-start; /* Ensure that items are pushed to the top */
     flex-grow: 1; /* Allow content to grow */
-    padding: 20px; 
+    height: 100vh; /* Full height to accommodate the image */
+    overflow: hidden; /* Prevent scrolling if content overflows */
 }
 
 /* Button styles */
 .info-link {
-    font-size: 2em; 
+    font-size: 1.4em; /* Initial size */
     color: #f4efef; 
     text-decoration: none; 
-    padding: 0.5em 1em; /* Adjusted padding for smaller screens */
+    padding: 0.4em 0.8em; /* Button padding */
     border: 2px solid #a8d565; 
     border-radius: 10px;  
     background-image: linear-gradient(rgb(119, 232, 119), rgb(106, 106, 221));
@@ -43,43 +43,44 @@ body {
 
 /* Top button styling */
 .top-link {
-    margin-top: 20px; /* Distance from the top */
+    margin: 0; /* Remove margin */
 }
 
 /* Hover effects for buttons */
 .info-link:hover {
-    background-image: linear-gradient(red, rgb(221, 110, 129));
-    color: #ffffff; /* Text color on hover */
+    background-image: linear-gradient(red, rgb(221, 110, 129)); /* Background color change */
+    color: #000000; /* Change text color to dark on hover */
     transform: translateY(-2px); /* Slight lift on hover */
 }
 
-/* Image styling */
-#clickable-cigarette {
-    width: 90%; /* Make image wider for responsiveness */
-    max-width: 600px; /* Maximum width for larger screens */
+/* Image styling (removed for your request) */
+/* #clickable-cigarette {
+    width: 100%; 
+    max-width: 100%; 
+    height: 100vh; 
+    object-fit: cover; 
     border-radius: 15px; 
-    margin: 20px 0; 
-}
+} */
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .info-link {
-        font-size: 1.8em;  /* Adjust button font size for medium screens */
-        padding: 0.5em; /* Update padding to ensure it fits */
+        font-size: 1em; /* Smaller button size for medium screens */
+        padding: 0.3em 0.6em; /* Smaller padding for medium screens */
     }
 }
 
 @media screen and (max-width: 480px) {
     .info-link {
-        font-size: 1.5em; /* Smaller font size for mobile */
-        padding: 0.4em; /* Smaller padding for mobile */
+        font-size: 0.9em; /* Smaller button size for mobile */
+        padding: 0.2em 0.4em; /* Smaller padding for mobile */
     }
 }
 
-/* Info page styles */
+/* Info page body styles */
 body.info {
-    background-image: url('./WhatsApp\ Image\ 2024-10-27\ at\ 16.11.22_5d88553c.jpg'); 
-    background-size: cover; 
+    background-image: url('./WhatsApp Image 2024-10-27 at 16.11.22_5d88553c.jpg'); 
+    background-size: cover; /* Cover the entire background */
     background-repeat: no-repeat; 
     background-position: center; 
     display: flex; 
@@ -90,60 +91,88 @@ body.info {
 
 /* Container for the info page */
 .info-container {
-    text-align: center;
-    padding: 25px; 
+    text-align: center; 
+    padding: 3%; /* Add responsive padding */
     border-radius: 15px; 
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
 }
 
 /* Title styling */
 .title {
-    font-size: 4em; /* Larger title size */
+    font-size: 5vw; /* Use viewport width for responsiveness */
     color: #e8f8db; 
     margin-bottom: 1em; 
 }
 
 /* Room info styling */
 .room-info {
-    font-size: 2em; /* Decreased font size for the room info */
     font-weight: bold;
+    font-size: 4vw; /* Use viewport width for responsiveness */
 }
 
-/* Room number with highlighted style */
+/* Room number styling */
 .room-number {
-    color: #f8eee9; 
+    color: #a8d565; 
+    font-size: 5vw; /* Use viewport width for responsiveness */
 }
 
+/* Highlighted text styling */
 .highlight {
-    color: rgb(237, 152, 152); 
+    color: rgb(248, 238, 238); 
     font-weight: bold; 
-    font: size 3em;;
+    font-size: 4vw; /* Use viewport width for responsiveness */
 }
-.whatsapp-number{
-    font-size: x-large;
+
+/* WhatsApp number styling */
+.whatsapp-number {
+    font-size: 4vw; /* Use viewport width for responsiveness */
     font-weight: bold;
     margin-bottom: 7px;
-    padding-top: 5px;
+    padding-top: 8px;
     margin-top: 8px;
+    color: rgb(90, 232, 184); /* Color for the WhatsApp number */
 }
-.whatsapp-number,.whatsapp-time{
-    font-weight: bold;
-    font-size: x-large;
+
+/* Flexbox for contact section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 /* Responsive Design for Info Page */
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 3em; 
+        font-size: 8vw; /* Adjust title size for smaller screens */
     }
     .room-info {
-        font-size: 2.5em; 
+        font-size: 6vw; /* Adjust room info size for smaller screens */
+    }
+    .room-number {
+        font-size: 7vw; /* Adjust room number size for smaller screens */
+    }
+    .highlight {
+        font-size: 6vw; /* Adjust highlight size for smaller screens */
+    }
+    .whatsapp-number {
+        font-size: 6vw; /* Adjust WhatsApp number size for smaller screens */
     }
 }
 
 @media screen and (max-width: 480px) {
     .title {
-        font-size: 2.5em; 
+        font-size: 10vw; /* Further adjust title for very small screens */
     }
     .room-info {
-        font-size: 2em; 
+        font-size: 8vw; /* Further adjust room info for very small screens */
+    }
+    .room-number {
+        font-size: 9vw; /* Further adjust room number for very small screens */
+    }
+    .highlight {
+        font-size: 8vw; /* Further adjust highlight for very small screens */
+    }
+    .whatsapp-number {
+        font-size: 8vw; /* Further adjust WhatsApp number for very small screens */
     }
 }

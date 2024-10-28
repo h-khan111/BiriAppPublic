@@ -4,18 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicotine Urge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS -->
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Default body styles */
+        body.index {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center content */
+            align-items: center;
+            height: 100vh; 
+            background: linear-gradient(135deg, #7d7ae7, #1e0860); /* Dark gradient background */
+        }
+
+        /* Content Container */
+        .content {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            flex-grow: 1; /* Allow content to grow */
+            padding: 20px; 
+        }
+
+        /* Button styles */
+        .button-88 {
+            display: flex;
+            align-items: center;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0.7em 1.4em 0.7em 1.1em;
+            color: white;
+            background: #ad5389;
+            background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+            letter-spacing: 0.05em;
+            border-radius: 20em;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin: 10px 0; /* Spacing for the buttons */
+        }
+
+        .button-88:hover {
+            box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+        }
+
+        .button-88:active {
+            box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+        }
+
+        /* Image styling */
+        #clickable-cigarette {
+            width: 100%; /* Make image responsive (full width of its container) */
+            max-width: 100%; /* Allow it to grow full width on mid/small screens */
+            height: 100vh; /* Make the image take full viewport height */
+            object-fit: cover; /* Ensure the image covers the container while preserving aspect ratio */
+            border-radius: 15px; 
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .button-88 {
+                font-size: 1em; /* Smaller button size for medium screens */
+                padding: 0.5em 1em; /* Adjust padding for medium screens */
+            }
+
+            #clickable-cigarette {
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .button-88 {
+                font-size: 0.9em; /* Smaller button size for mobile */
+                padding: 0.4em 0.8em; /* Smaller padding for mobile */
+            }
+
+            #clickable-cigarette {
+                height: 100vh; /* Take full height of the viewport */
+            }
+        }
+    </style>
 </head>
 <body class="index">
     <div class="content">
         <!-- Top Button -->
-        <a href="Info.html" class="info-link top-link">More Info</a>
+        <button class="button-88" role="button" onclick="location.href='Info.html';">More Info</button>
         
         <!-- Clickable Image -->
-        <img src="DALL·E 2024-10-26 18.31.47 - A cartoon-style anime-inspired poster featuring a boy with long hair, sitting on a hill and watching a sunset over an ocean. The boy is smoking an ove.webp" alt="Nicotine Urge Poster" id="clickable-cigarette">
+        <img src="DALL·E 2024-10-28 05.55.24 - A cartoon-style anime-inspired poster featuring a boy with long hair sitting on a grassy hill, holding a cigarette, and watching a sunset over an ocea.webp" alt="Nicotine Urge Poster" id="clickable-cigarette">
         
         <!-- Center Button -->
-        <a href="Info.html" class="info-link center-link">More Info</a>
+        <button class="button-88" role="button" onclick="location.href='Info.html';">More Info</button>
     </div>
 
     <!-- Optional JavaScript File (if needed) -->
